@@ -1,0 +1,52 @@
+
+
+HTML Summary Report
+
+What is HTML?
+HTML (HyperText Markup Language) is the standard language for creating web pages.
+
+Structure of HTML
+HTML pages have a basic structure: `<!DOCTYPE>`, `<html>`, `<head>`, and `<body>`.
+
+Steps to Create an HTML Page
+Start with `<!DOCTYPE html>`, then add `<html>`, with `<head>` for metadata and `<body>` for content.
+
+Doctype Declaration
+`<!DOCTYPE html>` tells the browser you're using HTML5.
+
+Head Tag
+The `<head>` contains the title, styles, and other metadata.
+
+Paragraph Tag 
+`<p>` defines paragraphs of text.
+
+Image Tag 
+`<img>` embeds images using the `src` attribute.
+
+Line Break (`<br>`) Tag 
+Inserts a line break in text.
+
+Text Style
+Use tags like `<b>`, `<i>`, and `<strong>` for styling text.
+
+Horizontal Line (`<hr>`) Tag 
+Creates a horizontal line across the page.
+
+Link
+`<a href="">` creates hyperlinks to other pages.
+
+Lists
+Use `<ul>` for unordered and `<ol>` for ordered lists.
+
+Div Tag
+`<div>` groups content for styling and layout.
+
+Forms 
+`<form>` collects user input with `<input>`, `<label>`, etc.
+
+Tables
+Use `<table>`, `<tr>`, and `<td>` to display tabular data.
+
+Blog
+Combine HTML elements to structure a blog layout (e.g., using `<article>`, `<section>`).
+
