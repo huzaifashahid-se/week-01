@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Shop — AneesMobile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="loading-overlay" id="page-loader"><div class="loader-ring"><div class="loader-inner"><div style="text-align:center"><div style="font-weight:800">AneesMobile</div></div></div></div></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="brand"><div class="logo">AneesMobile</div><div class="logo-sub">Shop</div></div>
+      <nav class="nav">
+        <a href="index.html" data-nav>Home</a>
+        <a href="shop.html" data-nav>Shop</a>
+        <a href="contact.html" data-nav>Contact</a>
+        <a href="#" id="open-cart" class="cta">Cart <span id="cart-count" style="color:var(--neon-green);font-weight:800;margin-left:6px"></span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section style="padding:28px">
+      <div style="max-width:1200px;margin:0 auto;display:flex;gap:20px">
+        <div style="flex:1">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+            <h2 style="margin:0">All Products</h2>
+            <div style="display:flex;gap:8px;align-items:center">
+              <input id="search" placeholder="Search products..." style="padding:8px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.02)" />
+              <select id="sort" style="padding:8px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.02)">
+                <option value="popular">Popular</option>
+                <option value="low">Price: low → high</option>
+                <option value="high">Price: high → low</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid" id="products-grid">
+            <!-- We'll output product cards here; duplicates of index.html's cards for demo -->
+            <!-- Product: samsung 25 ultra -->
+            <div class="card" data-id="samsung_s25_ultra" data-title="samsung_s25_ultra" data-price="89999">
+              <div class="card-inner">
+                <div class="card-face card-front">
+                  <div class="badge">NEW</div>
+                  <div class="prod-img">
+                    <svg width="120" height="160" viewBox="0 0 120 160"><rect rx="16" width="120" height="160" fill="url(#gA1)"/><defs><linearGradient id="gA1" x1="0" x2="1"><stop offset="0" stop-color="#ff2ec4"/><stop offset="1" stop-color="#00f0ff"/></linearGradient></defs></svg>
+                  </div>
+                  <div class="prod-meta">
+                    <div class="prod-title">samsung s25 ultra — 12/512</div>
+                    <div style="color:var(--muted);font-size:13px">6.8" AMOLED · 120Hz · 5000mAh</div>
+                    <div class="prod-price">Rs/-89,999</div>
+                  </div>
+                </div>
+                <div class="card-face card-back">
+                  <div class="center">
+                    <div style="font-weight:900;font-size:18px">samsung s25 ultra</div>
+                    <div style="color:var(--muted);margin:8px 0">Flagship performance with accents</div>
+                    <div class="row">
+                      <button class="buy-btn">Add to cart</button>
+                      <a class="btn" href="#" onclick="alert('Quick view — demo only')">Quick view</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product: iphone 12 pro -->
+            <div class="card" data-id="iphone_12_pro" data-title="iphone_12_pro" data-price="54999">
+              <div class="card-inner">
+                <div class="card-face card-front">
+                  <div class="badge">HOT</div>
+                  <div class="prod-img">
+                    <svg width="120" height="160" viewBox="0 0 120 160"><rect rx="16" width="120" height="160" fill="url(#gA2)"/><defs><linearGradient id="gA2" x1="0" x2="1"><stop offset="0" stop-color="#3bff8a"/><stop offset="1" stop-color="#00f0ff"/></linearGradient></defs></svg>
+                  </div>
+                  <div class="prod-meta">
+                    <div class="prod-title">iphone 12 pro — 8/256</div>
+                    <div style="color:var(--muted);font-size:13px">50MP Pro Camera · 6.5"</div>
+                    <div class="prod-price">Rs/-54,999</div>
+                  </div>
+                </div>
+                <div class="card-face card-back">
+                  <div class="center">
+                    <div style="font-weight:900">iphone 12 pro</div>
+                    <div style="margin:8px 0;color:var(--muted)">Camera-first smartphone</div>
+                    <div class="row"><button class="buy-btn">Add to cart</button><a class="btn" href="#" onclick="alert('Compare — demo')">Compare</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product: nothing 2 -->
+            <div class="card" data-id="nothing_2" data-title="nothing_2" data-price="29999">
+              <div class="card-inner">
+                <div class="card-face card-front">
+                  <div class="prod-img">
+                    <svg width="120" height="160" viewBox="0 0 120 160"><rect rx="16" width="120" height="160" fill="url(#gA3)"/><defs><linearGradient id="gA3" x1="0" x2="1"><stop offset="0" stop-color="#ff2ec4"/><stop offset="1" stop-color="#3bff8a"/></linearGradient></defs></svg>
+                  </div>
+                  <div class="prod-meta">
+                    <div class="prod-title">nothing 2 — 6/128</div>
+                    <div style="color:var(--muted);font-size:13px">Compact • Smooth UI</div>
+                    <div class="prod-price">Rs/-29,999</div>
+                  </div>
+                </div>
+                <div class="card-face card-back">
+                  <div class="center">
+                    <div style="font-weight:900">nothing 2</div>
+                    <div style="margin:8px 0;color:var(--muted)">Small form factor, big style</div>
+                    <div class="row"><button class="buy-btn">Add to cart</button><a class="btn" href="#" onclick="alert('Share — demo')">Share</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <aside style="width:360px">
+          <div style="position:sticky;top:80px">
+            <div style="padding:18px;border-radius:12px;background:var(--card);border:1px solid rgba(255,255,255,0.02)">
+              <h3 style="margin:0 0 8px">Your Cart</h3>
+              <div id="mini-cart" style="min-height:80px;color:var(--muted)">No items yet</div>
+              <div style="margin-top:12px;display:flex;gap:8px">
+                <button class="btn btn-primary" id="checkout-btn">Checkout</button>
+                <button class="btn" id="clear-cart">Clear</button>
+              </div>
+            </div>
+
+            <div style="margin-top:18px;padding:14px;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.02)">
+              <h4 style="margin:0 0 8px">Filters</h4>
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <label><input type="checkbox" checked> Show new</label>
+                <label><input type="checkbox" checked> Show popular</label>
+                <label style="color:var(--muted)">Price range: demo only</label>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <footer class="footer">AneesMobile ·  Shop —  UI</footer>
+  </main>
+
+  <div id="cart-modal" style="position:fixed;right:24px;top:80px;z-index:99998;width:360px;background:var(--card);border-radius:12px;padding:12px;box-shadow:0 30px 80px rgba(0,0,0,0.6);display:none">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div style="font-weight:800">Your Cart</div>
+      <div><button id="cart-close" class="btn">Close</button></div>
+    </div>
+    <div id="cart-items" style="margin-top:12px"></div>
+    <div style="margin-top:12px;display:flex;justify-content:flex-end">
+      <button class="btn btn-primary" onclick="alert('Demo checkout — implement real checkout')">Checkout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // shop-specific JS: sync mini cart
+    function renderMiniCart(){
+      const container = document.querySelector('#mini-cart');
+      const cart = JSON.parse(localStorage.getItem('anees_cart_v1')||'[]');
+      if(!cart.length){ container.innerHTML = '<div style="color:var(--muted)">Cart is empty</div>'; return; }
+      container.innerHTML = cart.map(i=>`<div style="display:flex;justify-content:space-between;padding:6px 0"><div><strong>${i.title}</strong><div style="font-size:13px;color:var(--muted)">${i.qty} × Rs/-${i.price}</div></div><div style="font-weight:800">Rs/-${(i.qty*i.price).toLocaleString()}</div></div>`).join('') + '<div style="border-top:1px solid rgba(255,255,255,0.02);padding-top:8px;margin-top:8px;text-align:right"><strong>Total: Rs/-' + cart.reduce((s,i)=>s+i.qty*i.price,0).toLocaleString() + '</strong></div>';
+      // wire clear and checkout
+    }
+    document.getElementById('clear-cart').addEventListener('click', ()=>{ localStorage.removeItem('anees_cart_v1'); renderMiniCart(); document.querySelector('#cart-count').textContent=''; });
+    document.getElementById('checkout-btn').addEventListener('click', ()=>alert('Checkout demo — integrate payment gateway'));
+    renderMiniCart();
+
+    // search + sort (basic client-side)
+    const grid = document.getElementById('products-grid');
+    document.getElementById('search').addEventListener('input', (e)=>{
+      const q = e.target.value.toLowerCase();
+      [...grid.querySelectorAll('.card')].forEach(c=>{
+        const title = c.dataset.title.toLowerCase();
+        c.style.display = title.includes(q) ? '' : 'none';
+      });
+    });
+    document.getElementById('sort').addEventListener('change', (e)=>{
+      const val = e.target.value;
+      const cards = [...grid.querySelectorAll('.card')];
+      cards.sort((a,b)=>{
+        const pa = parseFloat(a.dataset.price), pb = parseFloat(b.dataset.price);
+        if(val==='low') return pa-pb;
+        if(val==='high') return pb-pa;
+        return 0;
+      });
+      cards.forEach(c=>grid.appendChild(c));
+    });
+
+    // open cart modal
+    document.getElementById('open-cart').addEventListener('click', (e)=>{ e.preventDefault(); document.querySelector('#cart-modal').classList.add('show'); const ob = document.querySelector('#cart-modal'); ob.style.display='block'; });
+
+    // remove modal show on close
+    document.getElementById('cart-close').addEventListener('click', ()=>document.querySelector('#cart-modal').classList.remove('show'));
+
+  </script>
+</body>
+</html>

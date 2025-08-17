@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AneesMobile — Mobile Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="loading-overlay" id="page-loader">
+    <div class="loader-ring"><div class="loader-inner"><div style="text-align:center">
+      <div style="font-weight:800">AneesMobile</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:6px">Loading...</div>
+    </div></div></div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">AneesMobile</div>
+        <div class="logo-sub"> phones • Curated</div>
+      </div>
+      <nav class="nav">
+        <a href="index.html" data-nav>Home</a>
+        <a href="shop.html" data-nav>Shop</a>
+        <a href="contact.html" data-nav>Contact</a>
+        <a href="#" id="open-cart" class="cta">Cart <span id="cart-count" style="color:var(--neon-green);font-weight:800;margin-left:6px"></span></a>
+      </nav>
+      <div class="hamburger">
+        <button class="btn">Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Get the future in your hand brand new and best resale mobiles</h1>
+        <p class="lead">A curated selection of phones with style, speed, and long-lasting vibes. Explore  devices, flip cards, and lively animations everywhere — this is AneesMobile's showcase.</p>
+        <div class="hero-cta">
+          <a href="shop.html" data-nav class="btn btn-primary">Browse Collection</a>
+          <a href="contact.html" data-nav class="btn">Get Support</a>
+        </div>
+
+        <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+          <div class="pulse" style="padding:10px 12px;border-radius:12px;background:linear-gradient(90deg, rgba(0,240,255,0.03), rgba(255,46,196,0.02));border:1px solid rgba(255,255,255,0.02)">
+            <strong>Free case</strong> on first order
+          </div>
+          <div style="padding:10px 12px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.01), transparent);border:1px solid rgba(255,255,255,0.02)">
+            <strong>30-day</strong> returns · Secure checkout
+          </div>
+        </div>
+
+        <div style="margin-top:30px">
+          <div style="font-size:13px;color:var(--muted)">Featured</div>
+          <div style="display:flex;gap:10px;margin-top:10px">
+            <div style="padding:10px 12px;border-radius:10px;background:var(--glass)"><strong>samsung s25 ulrta</strong><div style="color:var(--muted);font-size:12px">Flagship — Rs/-89,999</div></div>
+            <div style="padding:10px 12px;border-radius:10px;background:var(--glass)"><strong>iphone 12 pro</strong><div style="color:var(--muted);font-size:12px">Camera beast — Rs/-54,999</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-phone">
+        <div class="floating-phone" role="img" aria-label="Demo phone">
+          <!-- phone mockup -->
+          <svg width="100%" height="100%" viewBox="0 0 320 640" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <linearGradient id="sgrad" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#0ff" stop-opacity="0.18"/>
+                <stop offset="0.6" stop-color="#ff2ec4" stop-opacity="0.08"/>
+                <stop offset="1" stop-color="#3bff8a" stop-opacity="0.04"/>
+              </linearGradient>
+            </defs>
+            <rect x="8" y="8" rx="24" ry="24" width="304" height="624" fill="#061021" stroke="rgba(255,255,255,0.03)"/>
+            <rect x="28" y="28" rx="12" width="264" height="584" fill="url(#sgrad)"/>
+            <g transform="translate(36,36)">
+              <rect width="232" height="552" rx="10" fill="#021018"/>
+              <text x="24" y="56" fill="#dffbff" font-size="18" font-family="Inter, Arial" font-weight="700">AneesMobile </text>
+              <g transform="translate(24,84)">
+               <image 
+  href="data:image/jpeg;base64,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" 
+  width="184" 
+  height="500" 
+  style="clip-path: inset(0 round 8px);" />
+
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="rings" aria-hidden="true">
+          <div class="ring r1"></div>
+          <div class="ring r2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:28px">
+      <div style="max-width:1200px;margin:0 auto">
+        <h3 style="margin:0 0 12px">Hot Picks</h3>
+        <div class="grid">
+          <!-- product card 1 -->
+          <div class="card" data-id="samsung_s25_ultra">
+            <div class="card-inner">
+              <div class="card-face card-front">
+                <div class="badge">NEW</div>
+                <div class="prod-img">
+                  <!-- small inline SVG as demo image -->
+                  <svg width="120" height="160" viewBox="0 0 120 160">
+                    <rect rx="16" width="120" height="160" fill="url(#g1)"/>
+                    <defs>
+                      <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#ff2ec4"/><stop offset="1" stop-color="#00f0ff"/></linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="prod-meta">
+                  <div class="prod-title">samsung s25 ultra — 12/512</div>
+                  <div style="color:var(--muted);font-size:13px">6.8" AMOLED · 120Hz · 5000mAh</div>
+                  <div class="prod-price">Rs/-89,999</div>
+                </div>
+              </div>
+              <div class="card-face card-back">
+                <div style="text-align:center">
+                  <div style="font-weight:900;font-size:18px">samsung s25 ultra</div>
+                  <div style="color:var(--muted);margin:8px 0">Flip to buy or add to cart</div>
+                  <button class="buy-btn">Add to cart</button>
+                  <div style="margin-top:12px;color:var(--muted);font-size:13px">Free shipping · 1-year warranty</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- product card 2 -->
+          <div class="card" data-id="iphone_12_pro">
+            <div class="card-inner">
+              <div class="card-face card-front">
+                <div class="badge">HOT</div>
+                <div class="prod-img">
+                  <svg width="120" height="160" viewBox="0 0 120 160">
+                    <rect rx="16" width="120" height="160" fill="url(#g2)"/>
+                    <defs>
+                      <linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#3bff8a"/><stop offset="1" stop-color="#00f0ff"/></linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="prod-meta">
+                  <div class="prod-title">iphone 12 pro — 8/256</div>
+                  <div style="color:var(--muted);font-size:13px">50MP Pro Camera · 6.5"</div>
+                  <div class="prod-price">Rs/-54,999</div>
+                </div>
+              </div>
+              <div class="card-face card-back">
+                <div class="center">
+                  <div style="font-weight:900">iphone 12 pro</div>
+                  <div style="margin:8px 0;color:var(--muted)">Great night shots with mode</div>
+                  <button class="buy-btn">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- product card 3 -->
+          <div class="card" data-id="nothing_2">
+            <div class="card-inner">
+              <div class="card-face card-front">
+                <div class="prod-img">
+                  <svg width="120" height="160" viewBox="0 0 120 160">
+                    <rect rx="16" width="120" height="160" fill="url(#g3)"/>
+                    <defs>
+                      <linearGradient id="g3" x1="0" x2="1"><stop offset="0" stop-color="#ff2ec4"/><stop offset="1" stop-color="#3bff8a"/></linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="prod-meta">
+                  <div class="prod-title">nothing 2 — 6/128</div>
+                  <div style="color:var(--muted);font-size:13px">Compact • Smooth UI</div>
+                  <div class="prod-price">Rs/-29,999</div>
+                </div>
+              </div>
+              <div class="card-face card-back">
+                <div class="center">
+                  <div style="font-weight:900">nothing 2</div>
+                  <div style="margin:8px 0;color:var(--muted)">Pocketable charm</div>
+                  <button class="buy-btn">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:28px">
+      <div style="max-width:1200px;margin:0 auto;display:flex;gap:18px;align-items:center;justify-content:space-between">
+        <div>
+          <h3 style="margin:0 0 6px">Why AneesMobile?</h3>
+          <p style="margin:0;color:var(--muted)">We focus on style, performance, and fun UI. All models are interactive and designed to show what your customers will feel when they browse.</p>
+        </div>
+        <div class="center" style="min-width:200px">
+          <div style="font-weight:900;font-size:22px;background:linear-gradient(90deg,var(--neon-cyan),var(--neon-pink));-webkit-background-clip:text;color:transparent">Limited stock</div>
+          <div style="color:var(--muted)">Hurry — limited runs.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div style="max-width:1000px;margin:0 auto">
+        <div style="display:flex;gap:20px;justify-content:center;align-items:center;flex-wrap:wrap">
+          <div>AneesMobile </div>
+          <div style="color:var(--muted)">© <span id="year"></span></div>
+          <div style="color:var(--muted)">Made by huzaifa shahid</div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- cart modal (used across pages) -->
+  <div id="cart-modal" style="position:fixed;right:24px;top:80px;z-index:99998;width:360px;background:var(--card);border-radius:12px;padding:12px;box-shadow:0 30px 80px rgba(0,0,0,0.6);display:none">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div style="font-weight:800">Your Cart</div>
+      <div><button id="cart-close" class="btn">Close</button></div>
+    </div>
+    <div id="cart-items" style="margin-top:12px"></div>
+    <div style="margin-top:12px;display:flex;justify-content:flex-end">
+      <button class="btn btn-primary" onclick="alert(' checkout — implement real checkout')">Checkout</button>
+    </div>
+  </div>
+
+  <script>
+    // small date fill
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // show/hide cart modal style
+    const cm = document.getElementById('cart-modal');
+    const observer = new MutationObserver(()=>{ cm.style.display = cm.classList.contains('show') ? 'block' : 'none'; });
+    observer.observe(cm, {attributes:true, attributeFilter:['class']});
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

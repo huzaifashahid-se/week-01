@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Contact — AneesMobile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="loading-overlay" id="page-loader"><div class="loader-ring"><div class="loader-inner"><div style="text-align:center"><div style="font-weight:800">AneesMobile</div></div></div></div></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="brand"><div class="logo">AneesMobile</div><div class="logo-sub">Contact</div></div>
+      <nav class="nav">
+        <a href="index.html" data-nav>Home</a>
+        <a href="shop.html" data-nav>Shop</a>
+        <a href="contact.html" data-nav>Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="padding:28px">
+    <div style="max-width:1000px;margin:0 auto">
+      <h2>Contact Us</h2>
+      <p style="color:var(--muted)">Drop a message and we'll reply within the timeframe.</p>
+
+      <div class="form">
+        <form id="contact-form">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div><label>Name</label><input class="input" name="name" placeholder="Your name"></div>
+            <div><label>Email</label><input class="input" name="email" placeholder="you@example.com"></div>
+          </div>
+          <div style="margin-top:10px"><label>Message</label><textarea name="message" placeholder="How can we help?"></textarea></div>
+          <div style="margin-top:12px;display:flex;gap:8px"><button class="btn btn-primary" type="submit">Send</button><button class="btn" type="reset">Reset</button></div>
+        </form>
+      </div>
+
+      <div style="margin-top:18px;display:grid;grid-template-columns:1fr 360px;gap:18px">
+        <div>
+          <h4>Head Office</h4>
+          <p style="color:var(--muted)"> address: Neon Street 42,  City</p>
+          <div style="display:flex;gap:12px;align-items:center;margin-top:12px">
+            <div style="padding:10px;border-radius:10px;background:var(--glass)"><strong>Support</strong><div style="color:var(--muted)">support@aneesmobile.</div></div>
+            <div style="padding:10px;border-radius:10px;background:var(--glass)"><strong>Sales</strong><div style="color:var(--muted)">sales@aneesmobile.</div></div>
+          </div>
+        </div>
+        <aside style="padding:12px;border-radius:12px;background:var(--card);border:1px solid rgba(255,255,255,0.02)">
+          <div style="font-weight:800">Business Hours</div>
+          <div style="color:var(--muted);margin-top:8px">Mon–Fri: 10:00–18:00</div>
+          <div style="color:var(--muted);margin-top:8px">Sat: 11:00–15:00 · Sun: Closed</div>
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">AneesMobile · contact</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
